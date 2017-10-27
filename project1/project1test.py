@@ -1,4 +1,4 @@
-from project1 import isMultipleOf5, isMultipleOf3
+from .project1 import isMultipleOf5, isMultipleOf3
 import unittest
 
 class project1test(unittest.TestCase):
