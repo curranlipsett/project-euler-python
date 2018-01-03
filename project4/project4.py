@@ -11,13 +11,14 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 def computeLargestPalindromeOfTwoThreeDigitNumbers(num1, num2):
 
+    largestPalindromeProduct = 0
     for i in range(num1, 0, -1):
         for j in range(num2, 0, -1):
             product = i * j
-            if isPalindrome(product):
-                return product
+            if isPalindrome(product) and product > largestPalindromeProduct:
+                largestPalindromeProduct = product
 
-
+    return largestPalindromeProduct
 # Check if number is a palindrome
 def isPalindrome(n):
     return str(n) == str(n)[::-1]
